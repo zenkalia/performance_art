@@ -74,7 +74,6 @@ current_time = start_time.dup
 
 file = File.open('output.srt', 'w')
 
-
 lines.each_with_index do |line, index|
   current_time += (line.time - lines[index-1].time) * time_multiplier if index > 0
 
